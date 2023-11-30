@@ -1,0 +1,268 @@
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
+.page {
+  padding-inline: 20px;
+  font-family: 'IBM Plex mono';
+  font-weight: normal;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  margin-block: 20px;
+  inline-size: 100%;
+}
+
+.header__theme-menu {
+  justify-self: center;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  border: none;
+  padding-inline: 13px;
+  font-size: 18px;
+  text-align: center;
+  text-transform: lowercase;
+  background-color: transparent;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+}
+
+.title {
+  font-weight: bold;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  line-height: 82.5%;
+}
+
+.header__title {
+  justify-self: start;
+  align-self: center;
+  margin-inline-start: -2%;
+}
+
+.header__subtitle {
+  justify-self: end;
+  align-self: center;
+  font-weight: bold;
+  inline-size: 50%;
+}
+
+.title-decor {
+  font-size: 18px;
+  line-height: 130%;
+}
+
+.cover {
+  position: relative;
+  block-size: calc(100vb - 40px);
+}
+
+.cover::before {
+  content: '';
+  position: absolute;
+  block-size: 25px;
+  inline-size: 25px;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+}
+
+.cover::after {
+  content: '';
+  position: absolute;
+  block-size: 25px;
+  inline-size: 25px;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+}
+
+.content {
+  display: grid;
+  margin-block-start: 80px;
+  font-size: 18px;
+}
+
+.content__two-columns {
+  grid-template-columns: 1fr 2fr;
+  column-gap: 20px;
+}
+
+.content__list-item:not(:last-of-type) {
+  margin-block-end: 20px;
+}
+
+.content__list-item__title {
+  margin-block-end: 10px;
+  font-size: 18px;
+}
+
+.content__list-item__text {
+  font-size: 18px;
+  line-height: 130%;
+}
+
+.content__title {
+  margin-block-end: 20px;
+  font-size: inherit;
+  max-inline-size: 100%;
+}
+
+.content__three-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+}
+
+.content__three-columns-title {
+  max-inline-size: 30%;
+}
+
+h4.content__list-item__title {
+  font-weight: normal;
+}
+
+h4.content__list-item__title:first-of-type {
+  margin-block-start: 20px;
+}
+
+.gallery__picture-set {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    'sunset sunset ice-cream'
+    'tape books ice-cream'
+    'tape street street';
+  margin-block-start: 20px;
+  grid-gap: 20px;
+}
+
+.gallery__sunset-picture {
+  grid-area: sunset;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery__ice-cream-picture {
+  grid-area: ice-cream;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery__tape-picture {
+  grid-area: tape;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery__books-picture {
+  grid-area: books;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery__street-picture {
+  grid-area: street;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  display: grid;
+  margin-block: 80px 20px;
+  inline-size: 100%;
+}
+
+.footer__title {
+  justify-self: center;
+  align-self: center;
+}
+
+.text-link {
+  outline: none;
+  text-decoration: none;
+}
+
+@media (width <= 768px) {
+
+  .header__theme-menu {
+    justify-self: end;
+    align-self: center;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: column;
+  }
+
+  .content__three-columns {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media (width <= 375px) {
+
+  .page {
+    padding-inline: 10px;
+  }
+
+  .header {
+    margin-block: 10px;
+  }
+
+  .header__title {
+    margin: auto;
+  }
+
+  .title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+
+  .header__subtitle {
+    inline-size: 100%;
+  }
+
+  .cover {
+    block-size: calc(100vb - 20px);
+  }
+
+  .content {
+    display: block;
+    margin-block-start: 50px;
+  }
+
+  .content__three-columns {
+    display: block;
+  }
+
+  .content__title {
+    max-inline-size: 100%;
+  }
+
+  .gallery__picture-set {
+    display: block;
+    margin-block-start: 10px;
+  }
+
+  .gallery__picture-set img:not(:last-of-type) {
+    margin-block-end: 5px;
+  }
+
+  .footer {
+    margin-block: 40px 10px;
+  }
+}

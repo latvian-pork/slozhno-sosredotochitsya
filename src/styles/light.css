@@ -1,0 +1,138 @@
+/*
+  Специально для светлой темы при наличии класса.
+  Здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+
+:root .theme_light {
+  --text-color: #353430;
+  --bg-color: #fff1f7;
+  --accent-color: #ff8dcb;
+  --title-color: #ffc2e6;
+  --border: 1px solid currentColor;
+}
+
+.page.theme_light {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  background-image: url(../images/cover-image-light.png);
+}
+
+.header__theme-menu-button:hover {
+  border: var(--border);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: var(--border);
+}
+
+.header__theme-menu-button_active {
+  border: var(--border);
+}
+
+.title {
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+}
+
+.cover::before {
+  border-inline-end: var(--border);
+  border-block-start: var(--border);
+}
+
+.cover::after {
+  border-inline-start: var(--border);
+  border-block-end: var(--border);
+}
+
+.footer__title {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.text-link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.text-link:hover {
+  border-block-end: var(--border);
+}
+
+.text-link:focus-visible {
+  border: var(--border);
+}
+
+.theme_light .rec-icon {
+  display: none;
+}
+
+@media not (prefers-color-scheme: dark) {
+
+  :root {
+    --text-color: #353430;
+    --bg-color: #fff1f7;
+    --accent-color: #ff8dcb;
+    --title-color: #ffc2e6;
+    --border: 1px solid currentColor;
+  }
+
+  .page {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    background-image: url(../images/cover-image-light.png);
+  }
+
+  .rec-icon {
+    display: none;
+  }
+
+  .header__theme-menu-button:hover {
+    border: var(--border);
+  }
+
+  .header__theme-menu-button:focus-visible {
+    border-block-end: var(--border);
+  }
+
+  .header__theme-menu-button_active {
+    border: var(--border);
+  }
+
+  .title {
+    color: var(--title-color);
+    text-shadow: 4px 4px 0 var(--accent-color);
+  }
+
+  .title-decor {
+    background-color: var(--accent-color);
+  }
+
+  .cover::before {
+    border-inline-end: var(--border);
+    border-block-start: var(--border);
+  }
+
+  .cover::after {
+    border-inline-start: var(--border);
+    border-block-end: var(--border);
+  }
+
+  .footer__title {
+    text-shadow: 2px 2px 0 var(--accent-color);
+  }
+
+  .text-link {
+    text-shadow: 2px 2px 0 var(--accent-color);
+  }
+
+  .text-link:hover {
+    border-block-end: var(--border);
+  }
+
+  .text-link:focus-visible {
+    border: var(--border);
+  }
+}

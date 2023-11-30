@@ -1,0 +1,189 @@
+/*
+  Специально для тёмной темы при наличии класса,
+  здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+
+:root .theme_dark {
+  --text-color: #f1b2ce;
+  --bg-color: #000028;
+  --accent-color: #ff0070;
+  --title-color: #db00ff;
+  --border: 1px solid currentColor;
+  --heading-color: #000028;
+}
+
+.page.theme_dark {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  background-image: url(../images/cover-image-dark.png);
+}
+
+.header__theme-menu {
+  color: var(--accent-color);
+}
+
+.header__theme-menu-button:hover {
+  border: var(--border);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: var(--border);
+}
+
+.header__theme-menu-button_active {
+  border: var(--border);
+}
+
+.title {
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.title-decor {
+  color: var(--heading-color);
+  background-color: var(--accent-color);
+}
+
+.cover::before {
+  border-inline-end: var(--border);
+  border-block-start: var(--border);
+  color: var(--accent-color);
+}
+
+.cover::after {
+  border-inline-start: var(--border);
+  border-block-end: var(--border);
+  color: var(--accent-color);
+}
+
+.footer__title {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.text-link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.text-link:hover {
+  border-block-end: var(--border);
+}
+
+.text-link:focus-visible {
+  border: var(--border);
+}
+
+.rec-icon {
+  position: absolute;
+  color: var(--accent-color);
+  font-size: 18px;
+  inset-block-start: 0;
+  inset-inline-end: calc(25px + 2px);
+  block-size: auto;
+  inline-size: auto;
+}
+
+.rec-icon::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  filter: drop-shadow(0 0 4px var(--accent-color));
+  block-size: 9px;
+  inline-size: 9px;
+  inset-inline-start: calc(100% + 10px);
+  inset-block-start: calc(50% - 9px / 2);
+}
+
+@media (prefers-color-scheme: dark) {
+
+  :root {
+    --text-color: #f1b2ce;
+    --bg-color: #000028;
+    --accent-color: #ff0070;
+    --title-color: #db00ff;
+    --border: 1px solid currentColor;
+    --heading-color: #000028;
+  }
+
+  .page {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    background-image: url(../images/cover-image-dark.png);
+  }
+
+  .header__theme-menu {
+    color: var(--accent-color);
+  }
+
+  .header__theme-menu-button:hover {
+    border: var(--border);
+  }
+
+  .header__theme-menu-button:focus-visible {
+    border-block-end: var(--border);
+  }
+
+  .header__theme-menu-button_active {
+    border: var(--border);
+  }
+
+  .rec-icon {
+    position: absolute;
+    color: var(--accent-color);
+    font-size: 18px;
+    inset-block-start: 0;
+    inset-inline-end: calc(25px + 2px);
+    block-size: auto;
+    inline-size: auto;
+  }
+
+  .rec-icon::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    filter: drop-shadow(0 0 4px var(--accent-color));
+    block-size: 9px;
+    inline-size: 9px;
+    inset-inline-start: calc(100% + 10px);
+    inset-block-start: calc(50% - 9px / 2);
+  }
+
+  .title {
+    color: var(--title-color);
+    text-shadow: 4px 4px 0 var(--accent-color);
+  }
+
+  .title-decor {
+    background-color: var(--accent-color);
+  }
+
+  .cover::before {
+    border-inline-end: var(--border);
+    border-block-start: var(--border);
+    color: var(--accent-color);
+  }
+
+  .cover::after {
+    border-inline-start: var(--border);
+    border-block-end: var(--border);
+    color: var(--accent-color);
+  }
+
+  .footer__title {
+    text-shadow: 2px 2px 0 var(--accent-color);
+  }
+
+  .text-link {
+    text-shadow: 2px 2px 0 var(--accent-color);
+  }
+
+  .text-link:hover {
+    border-block-end: var(--border);
+  }
+
+  .text-link:focus-visible {
+    border: var(--border);
+  }
+}

@@ -7,9 +7,9 @@
 }
 
 body {
+  margin: 0 auto;
   min-inline-size: 375px;
   max-inline-size: 1440px;
-  margin: 0 auto;
 }
 
 h1,
@@ -39,4 +39,15 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+button:hover,
+a:hover {
+  cursor: pointer;
+}
+
+button:focus,
+a:focus {
+  border: none;
+  outline: none;
 }
