@@ -2,7 +2,7 @@
 
 .page {
   padding-inline: 20px;
-  font-family: 'IBM Plex mono';
+  font-family: 'IBM Plex mono', sans-serif;
   font-weight: normal;
   background-position: center;
   background-size: cover;
@@ -14,6 +14,7 @@
   grid-template-rows: 1fr min-content 1fr;
   margin-block: 20px;
   inline-size: 100%;
+  min-block-size: 668px;
 }
 
 .header__theme-menu {
@@ -185,6 +186,7 @@ h4.content__list-item__title:first-of-type {
   display: grid;
   margin-block: 80px 20px;
   inline-size: 100%;
+  min-block-size: 668px;
 }
 
 .footer__title {
