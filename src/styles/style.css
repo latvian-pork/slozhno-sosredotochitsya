@@ -3,7 +3,7 @@
 .page {
   display: flex;
   flex-direction: column;
-  padding-inline: 20px;
+  padding-inline: var(--main-gap);
   color: var(--text-color);
   font-family: var(--main-font), monospace;
   font-weight: normal;
@@ -27,14 +27,14 @@
 .header {
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  margin: 20px 0;
+  margin: var(--main-gap) 0;
   inline-size: 100%;
-  block-size: calc(100vh - 40px);
+  block-size: calc(100vh - calc(2 * var(--main-gap)));
 }
 
 .header__theme-menu {
   justify-self: center;
-  color: var(--text-color);
+  color: var(--nav-color);
   line-height: normal;
 }
 
@@ -52,8 +52,6 @@
   text-transform: lowercase;
   background-color: transparent;
 }
-
-/* Обводка кнопок и ссылок в состоянии focus обнулена в глобальных стилях */
 
 .header__theme-menu-button_active {
   border: var(--border);
@@ -83,19 +81,19 @@
 .header__title {
   justify-self: start;
   align-self: center;
-  margin-inline-start: -2%;
+  margin-inline-start: -20px;
 }
 
 .header__subtitle {
   justify-self: end;
   align-self: center;
+  color: var(--subtitle-color);
   font-weight: bold;
   inline-size: 50%;
 }
 
 .cover {
   position: relative;
-  block-size: calc(100vb - 40px);
 }
 
 .cover::before {
@@ -103,6 +101,7 @@
   position: absolute;
   border-inline-end: var(--border);
   border-block-start: var(--border);
+  color: var(--nav-color);
   block-size: 25px;
   inline-size: 25px;
   inset-block-start: 0;
@@ -114,6 +113,7 @@
   position: absolute;
   border-inline-start: var(--border);
   border-block-end: var(--border);
+  color: var(--nav-color);
   block-size: 25px;
   inline-size: 25px;
   inset-block-end: 0;
@@ -125,7 +125,7 @@
   display: none;
   color: var(--accent-color);
   font-size: 18px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   inset-block-start: 0;
   inset-inline-end: calc(25px + 2px);
   block-size: auto;
@@ -136,6 +136,7 @@
   content: '';
   position: absolute;
   border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--accent-color);
   background-color: var(--accent-color);
   filter: drop-shadow(0 0 4px var(--accent-color));
   block-size: 9px;
@@ -155,16 +156,18 @@
 }
 
 .content__list-item:not(:last-of-type) {
-  margin-block-end: var(--large);
+  margin-block-end: 20px;
 }
 
 .content__list-item__title {
-  margin-block-end: var(--small);
+  margin-block-end: 10px;
+  color: var(--list-element-color);
   font-size: inherit;
 }
 
 .content__title {
   margin-block-end: 20px;
+  color: var(--content-title-color);
   font-size: inherit;
   max-inline-size: 100%;
 }
@@ -184,19 +187,18 @@
 }
 
 .content__subtitle:first-of-type {
-  margin-block-start: var(--large);
+  margin-block-start: 20px;
 }
 
 .content__gallery__title {
+  color: var(--list-element-color);
   font-size: inherit;
 }
 
 .gallery__picture-set {
   display: grid;
-  grid-template-columns: repeat(auto-fit, auto);
-  grid-template-rows: repeat(auto-fit, auto);
-  margin-block-start: var(--large);
-  grid-gap: var(--large);
+  margin-block-start: var(--main-gap);
+  grid-gap: var(--main-gap);
 }
 
 .gallery__picture {
@@ -233,9 +235,9 @@
 .footer {
   display: grid;
   flex-shrink: 0;
-  margin-block: 20px;
+  margin-block: var(--main-gap);
   inline-size: 100%;
-  block-size: calc(100vb - 40px);
+  block-size: calc(100vb - 2 * var(--main-gap));
 }
 
 .footer__title {
@@ -265,11 +267,6 @@
   .header__theme-menu {
     justify-self: end;
     align-self: center;
-    color: currentColor;
-  }
-
-  .header__title {
-    margin-inline-start: -1.25rem;
   }
 
   .header__theme-menu-list {
@@ -282,23 +279,19 @@
 
   .content__three-columns {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(auto-fill, 1fr);
   }
 }
 
-@media (width <= 375px) {
+@media (width <= 576px) {
   
-  .page {
-    padding-inline: var(--small);
+  :root {
+    --main-gap: 10px;
+    --small-gap: 5px;
   }
 
   .main-content {
     gap: 50px;
     margin-block: 40px;
-  }
-
-  .header {
-    margin-block: var(--small);
   }
 
   .header__title {
@@ -311,10 +304,6 @@
 
   .header__subtitle {
     inline-size: 100%;
-  }
-
-  .cover {
-    block-size: calc(100vb - 2 * var(--small));
   }
 
   .content {
@@ -332,14 +321,13 @@
 
   .gallery__picture-set {
     display: block;
-    margin-block-start: var(--small);
   }
 
   .gallery__picture-set img:not(:last-of-type) {
-    margin-block-end: calc(var(--small) / 2);
+    margin-block-end: var(--small-gap);
   }
 
   .footer {
-    margin-block: 0;
+    margin-block-start: 0;
   }
 }

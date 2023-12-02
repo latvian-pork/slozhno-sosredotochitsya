@@ -10,8 +10,8 @@
   --title-color: #ffc2e6;
   --border: 1px solid currentColor;
   --border-st: 1px solid rgb(50 49 45 / 0.4);
-  --small: 10px;
-  --large: 20px;
+  --small-gap: 10px;
+  --main-gap: 20px;
   --main-font: 'IBM Plex mono';
   --bg-image: url(../images/cover-image-light.png);
 }

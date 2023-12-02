@@ -4,11 +4,15 @@
   переключая тему
 */
 
-:root .theme_dark {
-  --text-color: #f1b2ce;
-  --bg-color: #000028;
-  --accent-color: #ff0070;
+:root .theme-dark {
   --title-color: #db00ff;
+  --nav-color: #ff0070;
+  --accent-color: #ff0070;
+  --text-color: #f1b2ce;
+  --subtitle-color: #000028;
+  --content-title-color: #ff0070;
+  --list-element-color: #000028;
+  --bg-color: #000028;
   --border: 1px solid currentColor;
   --border-st: 1px solid rgb(255 0 112 / 0.4);
   --small: 10px;
@@ -17,90 +21,26 @@
   --bg-image: url(../images/cover-image-dark.png);
 }
 
-.theme_dark.page {
-  color: var(--text-color);
-}
-
 .theme_dark .rec-icon {
   display: block;
-}
-
-.theme_dark .header__theme-menu {
-  color: var(--accent-color);
-}
-
-.theme_dark .header__subtitle {
-  color: var(--bg-color);
-}
-
-.theme_dark .cover:before {
-  color: var(--accent-color);
-}
-
-.theme_dark .cover:after {
-  color: var(--accent-color);
-}
-
-.theme_dark .content__title {
-  color: var(--accent-color);
-}
-
-.theme_dark .content__list-item__title {
-  color: var(--bg-color);
-}
-
-.theme_dark .content__gallery__title {
-  color: var(--bg-color);
 }
 
 @media (prefers-color-scheme: dark) {
   
   :root {
-    --text-color: #f1b2ce;
-    --bg-color: #000028;
-    --accent-color: #ff0070;
     --title-color: #db00ff;
-    --border: 1px solid currentColor;
+    --nav-color: #ff0070;
+    --accent-color: #ff0070;
+    --text-color: #f1b2ce;
+    --subtitle-color: #000028;
+    --content-title-color: #ff0070;
+    --list-element-color: #000028;
+    --bg-color: #000028;
     --border-st: 1px solid rgb(255 0 112 / 0.4);
-    --small: 10px;
-    --large: 20px;
-    --main-font: 'IBM Plex mono';
     --bg-image: url(../images/cover-image-dark.png);
-  }
-
-  .theme_auto.page {
-    color: var(--text-color);
   }
 
   .theme_auto .rec-icon {
     display: block;
-  }
-
-  .theme_auto .header__theme-menu {
-    color: var(--accent-color);
-  }
-
-  .theme_auto .header__subtitle {
-    color: var(--bg-color);
-  }
-
-  .theme_auto .cover:before {
-    color: var(--accent-color);
-  }
-
-  .theme_auto .cover:after {
-    color: var(--accent-color);
-  }
-
-  .theme_auto .content__title {
-    color: var(--accent-color);
-  }
-
-  .theme_auto .content__list-item__title {
-    color: var(--bg-color);
-  }
-
-  .theme_auto .content__gallery__title {
-    color: var(--bg-color);
   }
 }
