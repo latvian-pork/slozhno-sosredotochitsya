@@ -67,6 +67,7 @@
 }
 
 .title-decor {
+  color: var(--decor-color);
   background-color: var(--accent-color);
 }
 
@@ -87,7 +88,6 @@
 .header__subtitle {
   justify-self: end;
   align-self: center;
-  color: var(--subtitle-color);
   font-weight: bold;
   inline-size: 50%;
 }
@@ -138,7 +138,6 @@
   border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--accent-color);
   background-color: var(--accent-color);
-  filter: drop-shadow(0 0 4px var(--accent-color));
   block-size: 9px;
   inline-size: 9px;
   inset-inline-start: calc(100% + 10px);
@@ -161,13 +160,12 @@
 
 .content__list-item__title {
   margin-block-end: 10px;
-  color: var(--list-element-color);
   font-size: inherit;
 }
 
 .content__title {
   margin-block-end: 20px;
-  color: var(--content-title-color);
+  color: var(--subtitle-color);
   font-size: inherit;
   max-inline-size: 100%;
 }
@@ -191,7 +189,6 @@
 }
 
 .content__gallery__title {
-  color: var(--list-element-color);
   font-size: inherit;
 }
 
@@ -260,8 +257,6 @@
   border: var(--border);
 }
 
-/* Обводка кнопок и ссылок в состоянии focus обнулена в глобальных стилях */
-
 @media (width <= 768px) {
 
   .header__theme-menu {
@@ -283,11 +278,6 @@
 }
 
 @media (width <= 576px) {
-  
-  :root {
-    --main-gap: 10px;
-    --small-gap: 5px;
-  }
 
   .main-content {
     gap: 50px;
@@ -331,3 +321,8 @@
     margin-block-start: 0;
   }
 }
+
+/* Варвара, не знаю, одолела я наконец-то 
+эту работу или отправлюсь в следующую когорту, 
+но в любом случае спасибо вам за ваше терпение :D 
+и с наступающими праздниками!) */

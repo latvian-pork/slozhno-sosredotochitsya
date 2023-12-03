@@ -4,20 +4,15 @@
   переключая тему
 */
 
-:root .theme-dark {
+:root .theme_dark {
   --title-color: #db00ff;
   --nav-color: #ff0070;
   --accent-color: #ff0070;
   --text-color: #f1b2ce;
-  --subtitle-color: #000028;
-  --content-title-color: #ff0070;
-  --list-element-color: #000028;
+  --subtitle-color: #ff0070;
+  --decor-color: #000028;
   --bg-color: #000028;
-  --border: 1px solid currentColor;
   --border-st: 1px solid rgb(255 0 112 / 0.4);
-  --small: 10px;
-  --large: 20px;
-  --main-font: 'IBM Plex mono';
   --bg-image: url(../images/cover-image-dark.png);
 }
 
@@ -26,19 +21,18 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  
+
   :root {
     --title-color: #db00ff;
     --nav-color: #ff0070;
     --accent-color: #ff0070;
     --text-color: #f1b2ce;
-    --subtitle-color: #000028;
-    --content-title-color: #ff0070;
-    --list-element-color: #000028;
+    --subtitle-color: #ff0070;
+    --decor-color: #000028;
     --bg-color: #000028;
     --border-st: 1px solid rgb(255 0 112 / 0.4);
     --bg-image: url(../images/cover-image-dark.png);
-  }
+      }
 
   .theme_auto .rec-icon {
     display: block;
